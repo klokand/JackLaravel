@@ -19,7 +19,7 @@
   <div class="container">
     <div class="logo-menu">
       <div class="logo">
-        <h1><a href="#">Accent</a></h1>
+        <h1><a href="#">Company Name</a></h1>
       </div>
       <!--<a id="simple-menu" href="#sidr">Toggle menu</a>-->
       <div id="mobile-header"> <a class="responsive-menu-button" href="#"><i class="fa fa-bars"></i></a> </div>
@@ -41,8 +41,8 @@
 <div class="banner">
   <div class="container">
     <div class="header-text">
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p class="small-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+      <h2>What we do</h2>
+      <p class="small-text"> Company Name is operated by a team of over 400 staff nationwide and growing all the time. Our aim is to provide the most useful and helpful service possible and to lower the cost of good stuff inport into Australia.</p>
       <div class="button-section"> <a href="#" class="top-button">More Info</a> </div>
     </div>
   </div>
@@ -50,28 +50,28 @@
 <div class="about" id="about">
   <div class="container">
     <h3 class="text-head">About us</h3>
-    <p class="box-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+    <p class="box-desc">text text text text text text text text text text text text text text text texttext text text text text text text texttext text text text text text text texttext text text text text text text texttext text text text text text text texttext text text text text text text texttext text text text text text text texttext text text text text text text texttext text text text text text text text.</p>
     <div class="about-section">
       <ul>
         <li> <a href="#">
           <div class="story-img"><img src="images/pic1.jpg"/></div>
           <div class="story-box">
-            <h4>Solum deseruisse</h4>
-            <p>Solum deseruisse qui cu, pro utamur mediocritatem ut, ex per modus quando commune mazim saepe dicant est.</p>
+            <h4>strength 1</h4>
+            <p>text texttext text text text textext texttext text text text textext texttext text text text textext texttext text text text tex.</p>
           </div>
           </a> </li>
         <li> <a href="#">
           <div class="story-img"><img src="images/pic2.jpg"/></div>
           <div class="story-box">
-            <h4>Nulla dictas mel te</h4>
-            <p>Solum deseruisse qui cu, pro utamur mediocritatem ut, ex per modus quando commune mazim saepe dicant est.</p>
+            <h4>strength 2</h4>
+            <p>text texttext text text text textext texttext text text text textext texttext text text text textext texttext text text text tex.</p>
           </div>
           </a> </li>
         <li> <a href="#">
           <div class="story-img"><img src="images/pic3.jpg"/></div>
           <div class="story-box">
-            <h4> Et usu tation torquatos</h4>
-            <p>Solum deseruisse qui cu, pro utamur mediocritatem ut, ex per modus quando commune mazim saepe dicant est.</p>
+            <h4> strength 3</h4>
+            <p>text texttext text text text textext texttext text text text textext texttext text text text textext texttext text text text tex.</p>
           </div>
           </a> </li>
       </ul>
@@ -85,33 +85,33 @@
       <ul>
         <li>
           <div class="feature-icon icon1"></div>
-          <h4>Autenrm nusquam</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+          <h4>service one</h4>
+          <p>xt text text textextxt text text textextxt text text textextxt text text textextxt text text textextxt text text textext.</p>
         </li>
         <li>
           <div class="feature-icon icon2"></div>
-          <h4>Alterum docendi</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+          <h4>service two</h4>
+          <p>text text textextxt text text textextxt text text textextxt text text textextxt text text textextxt text text textext.</p>
         </li>
         <li>
           <div class="feature-icon icon3"></div>
-          <h4>Graece praesent</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+          <h4>services three</h4>
+          <p>text text textextxt text text textextxt text text textextxt text text textextxt text text textextxt text text textext..</p>
         </li>
         <li>
           <div class="feature-icon icon4"></div>
-          <h4>Vocent scaevola</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+          <h4>services four</h4>
+          <p>text text textextxt text text textextxt text text textextxt text text textextxt text text textextxt text text textext..</p>
         </li>
         <li>
           <div class="feature-icon icon5"></div>
-          <h4>Dicat graeci no eum</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+          <h4>services five</h4>
+          <p>text text textextxt text text textextxt text text textextxt text text textextxt text text textextxt text text textext..</p>
         </li>
         <li>
           <div class="feature-icon icon6"></div>
-          <h4>Perfecto sapientem</h4>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+          <h4>services six</h4>
+          <p>text text textextxt text text textextxt text text textextxt text text textextxt text text textextxt text text textext..</p>
         </li>
       </ul>
     </div>
@@ -120,7 +120,7 @@
 <div class="contact" id="contact">
   <div class="container">
     <h3 class="text-head">Contact us</h3>
-    <p class="box-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+    <p class="box-desc">text text textextxt text text textextxt text text textextxt text text textextxt text text textextxt text text textext..</p>
     <div class="contact-section">
       <form>
         <input type="text" name="Name" placeholder="Name" />
