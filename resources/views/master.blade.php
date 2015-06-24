@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accent</title>
+<title>Jack_Di</title>
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link href="css/font.css" rel="stylesheet" type="text/css">
