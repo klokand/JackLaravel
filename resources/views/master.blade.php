@@ -23,10 +23,7 @@
       </div>
       <!--<a id="simple-menu" href="#sidr">Toggle menu</a>-->
       <div id="mobile-header"> <a class="responsive-menu-button" href="#"><i class="fa fa-bars"></i></a> </div>
-	  <script>
-			// init controller
-			var controller = new ScrollMagic.Controller();
-		</script>
+	 
       <div class="menu" id="navigation">
         <ul>
           <li><a href="#">Home</a></li>
@@ -157,11 +154,7 @@ $('.responsive-menu-button').sidr({
 	side: 'right'
 
 	});
-$(document).ready(
-function() {
-$("html").niceScroll({cursorborder:"0px solid #fff",cursorwidth:"5px",scrollspeed:"70"});
-}
-);
+
 </script>
 </body>
 </html>
