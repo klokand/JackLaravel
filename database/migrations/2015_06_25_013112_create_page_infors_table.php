@@ -20,12 +20,12 @@ class CreatePageInforsTable extends Migration {
 			$table->text('strength_1');
 			$table->text('strength_2');
 			$table->text('strength_3');
-			$table->text('serivice_1');
-			$table->text('serivice_2');
-			$table->text('serivice_3');
-			$table->text('serivice_4');
-			$table->text('serivice_5');
-			$table->text('serivice_6');
+			$table->text('service_1');
+			$table->text('service_2');
+			$table->text('service_3');
+			$table->text('service_4');
+			$table->text('service_5');
+			$table->text('service_6');
 			$table->text('contact_us');
 			$table->timestamps();
 		});
