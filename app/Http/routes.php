@@ -11,10 +11,10 @@
 |
 */
 
-/*
+
 Route::get('/', 'WelcomeController@index');
-*/
-Route::get('/','MasterController@indexPage');
+
+Route::get('index','MasterController@indexPage');
 Route::get('home', 'HomeController@index');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
@@ -29,6 +29,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::post('updateServices','ContentController@updateServices');
     Route::post('updateContact','ContentController@updateContact');
 });
-Route::any('{path?}','MasterController@indexPage');
+//Route::any('{path?}','MasterController@indexPage');
 
 
