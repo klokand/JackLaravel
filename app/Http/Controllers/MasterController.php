@@ -10,7 +10,7 @@ class MasterController extends Controller {
 
 	public function indexPage(){
 		$pageInfor = PageInfor::find(1);
-		return view('Master')->with('pageInfor',$pageInfor);
+		return view('master')->with('pageInfor',$pageInfor);
 	}
 
 }
