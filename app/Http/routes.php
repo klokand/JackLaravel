@@ -19,8 +19,15 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
-Route::any('{path?}',function(){
-	return  view('master');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::post('updateCompanyName','ContentController@updateCompanyName');
+	Route::post('updateWhatWeDo','ContentController@updateWhatWeDo');
+	Route::post('updateAboutUs','ContentController@updateAboutUs');
+	Route::post('updateStrengths','ContentController@updateStrengths');
+	Route::post('updateServices','ContentController@updateServices');
+    Route::post('updateContact','ContentController@updateContact');
 });
+Route::any('{path?}','MasterController@indexPage');
 
 

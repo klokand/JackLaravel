@@ -3,12 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jack_Di</title>
+<title>{{$pageInfor->company_name}}</title>
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link href="css/font.css" rel="stylesheet" type="text/css">
 <link href="css/responsive.css" rel="stylesheet" media="screen" type="text/css">
 <link rel="stylesheet" href="sidr/stylesheets/jquery.sidr.dark.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 <script src="js/jquery.min.js"></script>
 <script src="sidr/jquery.sidr.min.js"></script>
 <script src="js/jquery.scrollmagic.min.js"></script>
@@ -19,7 +20,7 @@
   <div class="container">
     <div class="logo-menu">
       <div class="logo">
-        <h1><a href="#">Company Name</a></h1>
+        <h1><a href="#">{{$pageInfor->company_name}}</a></h1>
       </div>
       <!--<a id="simple-menu" href="#sidr">Toggle menu</a>-->
       <div id="mobile-header"> <a class="responsive-menu-button" href="#"><i class="fa fa-bars"></i></a> </div>
@@ -39,7 +40,7 @@
   <div class="container">
     <div class="header-text">
       <h2>What we do</h2>
-      <p class="small-text"> Company Name is operated by a team of over 400 staff nationwide and growing all the time. Our aim is to provide the most useful and helpful service possible and to lower the cost of good stuff inport into Australia.</p>
+      <p class="small-text"> {{$pageInfor->what_we_do}}</p>
       <div class="button-section"> <a href="#" class="top-button">More Info</a> </div>
     </div>
   </div>
@@ -47,28 +48,28 @@
 <div class="about" id="about">
   <div class="container">
     <h3 class="text-head">About us</h3>
-    <p class="box-desc">text text text text text text text text text text text text text text text texttext text text text text text text texttext text text text text text text texttext text text text text text text texttext text text text text text text texttext text text text text text text texttext text text text text text text texttext text text text text text text texttext text text text text text text text.</p>
+    <p class="box-desc">{{$pageInfor->about_us}}</p>
     <div class="about-section">
       <ul>
         <li> <a href="#">
           <div class="story-img"><img src="images/pic1.jpg"/></div>
           <div class="story-box">
             <h4>strength 1</h4>
-            <p>text texttext text text text textext texttext text text text textext texttext text text text textext texttext text text text tex.</p>
+            <p>{{$pageInfor->strength_1}}</p>
           </div>
           </a> </li>
         <li> <a href="#">
           <div class="story-img"><img src="images/pic2.jpg"/></div>
           <div class="story-box">
             <h4>strength 2</h4>
-            <p>text texttext text text text textext texttext text text text textext texttext text text text textext texttext text text text tex.</p>
+            <p>{{$pageInfor->strength_2}}</p>
           </div>
           </a> </li>
         <li> <a href="#">
           <div class="story-img"><img src="images/pic3.jpg"/></div>
           <div class="story-box">
             <h4> strength 3</h4>
-            <p>text texttext text text text textext texttext text text text textext texttext text text text textext texttext text text text tex.</p>
+            <p>{{$pageInfor->strength_3}}</p>
           </div>
           </a> </li>
       </ul>
@@ -83,32 +84,32 @@
         <li>
           <div class="feature-icon icon1"></div>
           <h4>service one</h4>
-          <p>xt text text textextxt text text textextxt text text textextxt text text textextxt text text textextxt text text textext.</p>
+          <p>{{$pageInfor->service_1}}</p>
         </li>
         <li>
           <div class="feature-icon icon2"></div>
           <h4>service two</h4>
-          <p>text text textextxt text text textextxt text text textextxt text text textextxt text text textextxt text text textext.</p>
+          <p>{{$pageInfor->service_2}}</p>
         </li>
         <li>
           <div class="feature-icon icon3"></div>
           <h4>services three</h4>
-          <p>text text textextxt text text textextxt text text textextxt text text textextxt text text textextxt text text textext..</p>
+          <p>{{$pageInfor->service_3}}</p>
         </li>
         <li>
           <div class="feature-icon icon4"></div>
           <h4>services four</h4>
-          <p>text text textextxt text text textextxt text text textextxt text text textextxt text text textextxt text text textext..</p>
+          <p>{{$pageInfor->service_4}}</p>
         </li>
         <li>
           <div class="feature-icon icon5"></div>
           <h4>services five</h4>
-          <p>text text textextxt text text textextxt text text textextxt text text textextxt text text textextxt text text textext..</p>
+          <p>{{$pageInfor->service_5}}</p>
         </li>
         <li>
           <div class="feature-icon icon6"></div>
           <h4>services six</h4>
-          <p>text text textextxt text text textextxt text text textextxt text text textextxt text text textextxt text text textext..</p>
+          <p>{{$pageInfor->service_6}}</p>
         </li>
       </ul>
     </div>
@@ -117,7 +118,11 @@
 <div class="contact" id="contact">
   <div class="container">
     <h3 class="text-head">Contact us</h3>
-    <p class="box-desc">text text textextxt text text textextxt text text textextxt text text textextxt text text textextxt text text textext..</p>
+    <div class="box-desc row">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">{{$pageInfor->post_address}}</div>
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">{{$pageInfor->email_address}}</div>
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">{{$pageInfor->phone_number}}</div> 
+	</div>
     <div class="contact-section">
       <form>
         <input type="text" name="Name" placeholder="Name" />
@@ -138,7 +143,7 @@
       <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
     </ul>
     <div class="infooter">
-      <p class="copyright">Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="#"></a></p>
+      <p class="copyright">Copyright &copy; {{date('Y')}}.{{$pageInfor->company_name}} All rights reserved.<a target="_blank" href="#"></a></p>
     </div>
   </div>
 </div>

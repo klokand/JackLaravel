@@ -156,7 +156,7 @@ h3.text-head {
 	text-align: center;
 	padding-bottom: 20px;
 }
-p.box-desc {
+div.box-desc {
 	color: #888;
 	font-size: 18px;
 	font-weight: 400;

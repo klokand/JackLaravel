@@ -1,34 +1,3 @@
-<?php
-
-use Illuminate\Database\Seeder;
-use Illuminate\Database\Eloquent\Model;
-
-class DatabaseSeeder extends Seeder {
-
-	/**
-	 * Run the database seeds.
-	 *
-	 * @return void
-	 */
-	public function run()
-	{
-		Model::unguard();
-
-		$this->call('PageInforSeeder');
-		$this->command->info('Page Info Seeded!');
-	}
-
-}
-class UserSeeder extends Seeder{
-	public function run(){
-		DB::table('users')->insert(array(
-			'name'=>'Mark',
-			'email'=>'xjz520223@gmail.com',
-			'password'=>bcrypt('123456')
-		));
-	}
-}
-
 class PageInforSeeder extends Seeder{
 	public function run(){
 		DB::table('page_infors')->insert(array([

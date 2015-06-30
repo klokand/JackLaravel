@@ -16,6 +16,7 @@ class CreatePageInforsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->text('company_name');
+			$table->text('what_we_do');
 			$table->text('about_us');
 			$table->text('strength_1');
 			$table->text('strength_2');
@@ -26,7 +27,9 @@ class CreatePageInforsTable extends Migration {
 			$table->text('service_4');
 			$table->text('service_5');
 			$table->text('service_6');
-			$table->text('contact_us');
+			$table->text('post_address');
+			$table->text('email_address');
+			$table->text('phone_number');
 			$table->timestamps();
 		});
 	}

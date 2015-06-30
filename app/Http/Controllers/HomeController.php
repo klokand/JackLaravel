@@ -1,4 +1,8 @@
-<?php namespace App\Http\Controllers;
+<?php 
+namespace App\Http\Controllers;
+use App\PageInfor;
+use App\User;
+
 
 class HomeController extends Controller {
 
@@ -30,7 +34,9 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home');
+		$pageInfor = PageInfor::find(1);
+		$user = User::findOrFail(1);
+		return view('home',compact('pageInfor','user'));
 	}
 
 }
