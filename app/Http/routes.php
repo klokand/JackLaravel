@@ -16,12 +16,15 @@
 
 Route::get('/','MasterController@indexPage');
 Route::get('home', 'HomeController@index');
+Route::post('email','EmailController@sendEmail');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
 
 Route::group(['middleware' => 'auth'], function () {
+	Route::post('checkOldEmailP','ContentController@checkOldEmailP');
+	Route::post('updatePassword','ContentController@updatePassword');
     Route::post('updateCompanyName','ContentController@updateCompanyName');
 	Route::post('updateWhatWeDo','ContentController@updateWhatWeDo');
 	Route::post('updateAboutUs','ContentController@updateAboutUs');

@@ -10,9 +10,11 @@
 <link href="css/responsive.css" rel="stylesheet" media="screen" type="text/css">
 <link rel="stylesheet" href="sidr/stylesheets/jquery.sidr.dark.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/jquery-impromptu.min.css">
 <script src="js/jquery.min.js"></script>
 <script src="sidr/jquery.sidr.min.js"></script>
 <script src="js/jquery.scrollmagic.min.js"></script>
+<script src="js/jquery-impromptu.min.js"></script>
 </head>
 
 <body>
@@ -124,10 +126,11 @@
 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">{{$pageInfor->phone_number}}</div> 
 	</div>
     <div class="contact-section">
-      <form>
-        <input type="text" name="Name" placeholder="Name" />
+      <form id="queryForm">
+        <input type="text" name="name" placeholder="Name" />
         <input type="email" name="email" placeholder="Email"/>
-        <textarea placeholder="Message" rows="6"></textarea>
+        <textarea name="comment" placeholder="Message" rows="6"></textarea>
+		<input type="hidden" name="_token" value="{{ csrf_token() }}">
         <button type="submit" class="submit">Send Message</button>
       </form>
     </div>
@@ -159,7 +162,38 @@ $('.responsive-menu-button').sidr({
 	side: 'right'
 
 	});
-
+$('#queryForm').submit(function(event) {
+	
+	/* stop form from submitting normally */
+  	event.preventDefault();
+	var name = $('input[name=name]').val();
+	var email = $('input[name=email]').val();
+	var comment = $('textarea[name=comment]').val();
+	var token =$('input[name=_token]').val();
+		var url ="email";
+		var $post ={};
+		$post.name = name;
+		$post.email = email;
+		$post.comment = comment;
+		$post._token = token;
+	  	//ajax post the form
+		$.ajax({
+			type:"POST",
+			url: url,
+			data: $post,
+			cache:false,
+			success:function(data){
+				console.log(data);
+				var result = $.trim(data);
+				if(result =="sent out"){
+					$("input").val("");
+					$("textarea").val("");
+					$.prompt("Message has been sent out");
+				}
+			}
+		});
+		return false;
+	});
 </script>
 </body>
 </html>

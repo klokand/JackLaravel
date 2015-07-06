@@ -33,28 +33,30 @@
   <div class="tab-content">
 	<div role="tabpanel" class="tab-pane" id="myAccountTag">
 		{{-- Form Starts Here --}}
-		{!!Form::model($user,array('id' => 'ajaxMyAccount'))!!}
+		{!!Form::model($user,array('id' =>'ajaxMyAccount'))!!}
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		<div class="form-group">
 		{!! Form::label('AccountId','E-Mail Address',['for'=>'accountEmail'])!!}
 	 {!!Form::text('email',null,['disabled','class'=>'form-control'])!!}
 		</div>
-		<div class="form-group">
+		<div id="oldPasswordCheckInputAjax" class="form-group">
 		{!! Form::label('oldPassword','Old Password',['for'=>'oldPassword'])!!}
 		{!!Form::password('oldPassword',['class'=>'form-control'])!!}
+		<span id="oldPasswordCheckStatus" class="form-control-feedback" aria-hidden="true"></span>
 		</div>
 		<div class="form-group">
 		{!! Form::label('newPassword','New Password',['for'=>'newPassword'])!!}
 		{!!Form::password('newPassword',['class'=>'form-control'])!!}
 		</div>
 		<div class="form-group">
-		{!! Form::label('tryNewPassword','Try Again New Password',['for'=>'tryNewPassword'])!!}
+		{!! Form::label('tryNewPassword','Retype New Password',['for'=>'tryNewPassword'])!!}
 		{!!Form::password('tryNewPassword',['class'=>'form-control'])!!}
 		</div>
 		{!!Form::submit('Edit!')!!}
 		{!!Form::close()!!}
 		{{-- Form Ends Here --}}
 	</div>
+	
 	
     <div role="tabpanel" class="tab-pane active" id="companyNameTag">
 

@@ -1,10 +1,97 @@
+var test = 0;
 $.ajaxSetup({
    headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
 });
 $(function(){
         //We hide de the result div on start
         $('#feedback').hide();
+		$("#ajaxMyAccount").validate({
+			rules:{
+				oldPassword:{
+					required:true,
+					minlength:6,
+					remote:{
+						url:"checkOldEmailP",
+						type:"post",
+						data:{
+							oldPassword:function(){
+								return $("#oldPassword").val();
+							},
+							_token:function(){
+								return $('input[name=_token]').val();
+							}
+						},
+						success:function(data){
+							var result = $.trim(data);
+							if(result =="1"){
+								console.log("first if");
+							$("#oldPasswordCheckInputAjax").attr("class","form-group has-success has-feedback");
+							$("#oldPasswordCheckStatus").attr("class","glyphicon glyphicon-ok form-control-feedback");
+							test =1;
+							}else if(result=="2"){
+							test =0;
+							console.log("second if");
+								$("#oldPasswordCheckInputAjax").attr("class","form-group has-error has-feedback");
+								$("#oldPasswordCheckStatus").attr("class","glyphicon glyphicon-remove form-control-feedback");
+							}
+						},
+					}	
+				},
+				newPassword:{
+					required:true,
+					minlength:6,
+				},
+				tryNewPassword:{
+					required:true,
+					minlength:6,
+					equalTo:"#newPassword",
+				}
+			},
+			messages:{
+				tryNewPassword:{
+					equalTo:"This doesn't match the above password!",
+				}
+			}
+		});
 });
+
+$('#ajaxMyAccount').submit(function(event) {
+	
+	/* stop form from submitting normally */
+	if($('#ajaxMyAccount').valid()){
+		if(test ==1){
+			event.preventDefault();
+			var newPassWord = $('input[name=newPassword]').val();
+			var token =$('input[name=_token]').val();
+			console.log(newPassWord);
+			var url ="updatePassword";
+			var $post ={};
+			$post.newPassword = newPassWord;
+			$post._token = token;
+			
+			//ajax post the form
+			$.ajax({
+			type:"POST",
+			url: url,
+			data: $post,
+			cache:false,
+			success:function(data){
+				$('#message').text(data);
+				$('#feedback').show();
+				$("#oldPasswordCheckInputAjax").attr("class","form-group");
+				$("#oldPasswordCheckStatus").attr("class","form-control-feedback");
+				$("#oldPassword").val("");
+				$("#newPassword").val("");
+				$("#tryNewPassword").val("");
+			}
+		});
+		return false;
+		}
+		
+	}
+	});
+
+
 
 $('#ajaxCompanyName').submit(function(event) {
 	

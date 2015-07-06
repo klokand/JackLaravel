@@ -238,6 +238,7 @@ th {
   .label {
     border: 1px solid #000;
   }
+  
   .table {
     border-collapse: collapse !important;
   }
@@ -2291,6 +2292,9 @@ label {
   max-width: 100%;
   margin-bottom: 5px;
   font-weight: bold;
+}
+label.error{
+	color:red;
 }
 input[type="search"] {
   box-sizing: border-box;
